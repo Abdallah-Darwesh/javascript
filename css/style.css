@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+body{
+    background-color: bisque;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+
+h1 {
+font-family: "Pacifico", cursive;
+font-size:50px ;
+position: relative;
+width: 100%;
+text-align: center;
+margin: auto !important;
+}
+
+h1::after {
+    z-index: -1;
+content:"";
+position: absolute;
+ width: 400px !important;
+ height: 50% !important;
+ background-color: rgb(246, 187, 116);
+bottom: -15px;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ transition: height 1s;
+}
+
+
+h1:hover::after{
+    height: 80% !important; 
+} 
+h2{
+    font-family: "Righteous", sans-serif;
+    
+}
+a{
+    
+}
+
+.row,a,input{
+    border-radius: 5px !important;
+}
+
+/* Popup container */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
